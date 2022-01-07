@@ -5,7 +5,7 @@
 ## Part 1 
 ### Question 2
 
-**Dynamic power: **
+**Dynamic power:**
 
 **Static power:**
 

@@ -26,6 +26,11 @@ C is the switched load capacitance, f is frequency, V is voltage
 **Leakage:** It consists of subthreshold and gate leakage.
 
 
+![Screenshot from 2022-01-07 18-14-38](https://user-images.githubusercontent.com/94965416/148578165-f41179eb-9081-444b-8461-3318f6b3b317.png)
+
+
+
+
 wikipedia
 https://www.edaboard.com
 https://www.slideshare.net/sdpable/power-consumption![Uploading Screenshot from 2022-01-07 18-50-09.png…]()

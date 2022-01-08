@@ -37,9 +37,12 @@ C is the switched load capacitance, f is frequency, V is voltage
 ![Screenshot from 2022-01-07 18-14-38](https://user-images.githubusercontent.com/94965416/148578165-f41179eb-9081-444b-8461-3318f6b3b317.png)
 
 
-
+*IF WE RUN DIFFERENT PROGRAMS IN THE SAME CPU, WHICH OF THE ABOVE WILL BE AFFECTED? DOES IT MATTER HOW BIG IS A PROGRAM?*
 
 wikipedia
+
 https://www.edaboard.com
+
 https://www.slideshare.net/sdpable/power-consumption
+
 https://www.iue.tuwien.ac.at/phd/stockinger/node17.html

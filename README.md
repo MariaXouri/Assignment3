@@ -25,6 +25,10 @@ C is the switched load capacitance, f is frequency, V is voltage
 
 ![image](https://user-images.githubusercontent.com/94965416/148650172-8d4c1f73-1507-4ec4-818b-a5da88fe416f.png)
 
+**SHORT CIRCUIT DISPLAY**
+
+![image](https://user-images.githubusercontent.com/94965416/148650779-1dd92035-dd02-49d3-9c7b-fdf983751325.png)
+
 
 **Leakage:** It consists of subthreshold and gate leakage.
 

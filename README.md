@@ -39,6 +39,10 @@ C is the switched load capacitance, f is frequency, V is voltage
 
 *IF WE RUN DIFFERENT PROGRAMS IN THE SAME CPU, WHICH OF THE ABOVE WILL BE AFFECTED? DOES IT MATTER HOW BIG IS A PROGRAM?*
 
+![image](https://user-images.githubusercontent.com/94965416/148652805-28d6ef3f-8435-4e00-8e09-f2e61d67bc27.png)
+
+If we observe this diagram, we can realise that in a specific CPU the dynamic power changes if we run a different program.As we reduce the area, we understand that the difference in energy between them becomes bigger.
+
 wikipedia
 
 https://www.edaboard.com

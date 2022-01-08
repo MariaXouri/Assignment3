@@ -21,7 +21,10 @@ C is the switched load capacitance, f is frequency, V is voltage
 
 
 
-**Short-circuit power:**
+**Short-circuit power:** Short circuit power refers to the theoritical current that will run in the event of a short circuit without protection.It can be found by the following formula:
+
+![image](https://user-images.githubusercontent.com/94965416/148650172-8d4c1f73-1507-4ec4-818b-a5da88fe416f.png)
+
 
 **Leakage:** It consists of subthreshold and gate leakage.
 

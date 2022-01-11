@@ -56,6 +56,8 @@ A small value of clock frequency simultaneously means a low performance.That is 
 
 wikipedia
 
+https://www.ijert.org/research/energy-efficiency-in-processors-a-survey-IJERTCONV3IS21013.pdf
+
 https://www.edaboard.com
 
 https://www.slideshare.net/sdpable/power-consumption

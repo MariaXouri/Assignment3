@@ -43,6 +43,17 @@ C is the switched load capacitance, f is frequency, V is voltage
 
 If we observe this diagram, we can realise that in a specific CPU the dynamic power changes if we run a different program.As we reduce the area, we understand that the difference in energy between them becomes bigger.
 
+### Question 4 : Why Xeon can't be more energy efficient than ARM A9 although it performs better?
+
+After taking into consideration that Xeon performs 40 times faster than ARM A9 we can understand that this fact might affect its energy efficiency level.Energy efficiency means using as lower energy as possible.Data shows that Dynamic power can be decreased by
+1. Decrease in the total gate number
+2. Decrease of clock frequency
+
+![Screenshot from 2022-01-11 16-53-42](https://user-images.githubusercontent.com/94965416/148965858-ed5e4459-ad73-4daf-ab85-924a04778231.png)
+
+A small value of clock frequency simultaneously means a low performance.That is the reason why Xeon can't be as energy efficient as wanted.
+
+
 wikipedia
 
 https://www.edaboard.com

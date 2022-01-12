@@ -54,6 +54,21 @@ After taking into consideration that Xeon performs 40 times faster than ARM A9 w
 A small value of clock frequency simultaneously means a low performance.That is the reason why Xeon can't be as energy efficient as wanted.
 
 
+## Part 2
+
+RESULTS 
+
+**Core**
+
+
+        
+
+
+
+**L2**
+
+
+
 wikipedia
 
 https://www.ijert.org/research/energy-efficiency-in-processors-a-survey-IJERTCONV3IS21013.pdf

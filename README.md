@@ -61,13 +61,9 @@ RESULTS
 **Core** : total area is: 121.7895454 mm^2
 
 
-        
-
-
-
 **L2** : total area is: 16.0033 mm^2
 
-
+Runtime dynamic is equal to the energy consumed divided by the time elapsed.
 
 wikipedia
 

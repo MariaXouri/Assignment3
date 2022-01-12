@@ -64,6 +64,8 @@ RESULTS
 **L2** : total area is: 16.0033 mm^2
 
 Runtime dynamic is equal to the energy consumed divided by the time elapsed.
+the timing model uses
+both resistance and capacitance to compute RC delays
 
 wikipedia
 

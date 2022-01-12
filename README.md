@@ -58,14 +58,14 @@ A small value of clock frequency simultaneously means a low performance.That is 
 
 RESULTS 
 
-**Core**
+**Core** : total area is: 121.7895454 mm^2
 
 
         
 
 
 
-**L2**
+**L2** : total area is: 16.0033 mm^2
 
 
 

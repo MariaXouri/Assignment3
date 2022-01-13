@@ -67,6 +67,15 @@ Runtime dynamic is equal to the energy consumed divided by the time elapsed.
 the timing model uses
 both resistance and capacitance to compute RC delays
 
+To measure the delay (latency), we can use the Runtime Dynamic = Energy/Time elapsed
+
+**TOTAL RUNTIME DYNAMIC**
+
+Core: 149.740847 W/s
+
+L2: 7.23071 W/s
+
+
 wikipedia
 
 https://www.ijert.org/research/energy-efficiency-in-processors-a-survey-IJERTCONV3IS21013.pdf

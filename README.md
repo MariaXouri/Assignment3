@@ -70,7 +70,7 @@ RESULTS
 
 Energy = (leakage + dynamic)*runtime
 
-leakage = total leakage
+Leakage can be found by "total leakage", dynamic can by found by "Runtime Dynamic" and runtime by statistics.
 
 dynamic = runtime dynamic
 

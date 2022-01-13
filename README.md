@@ -56,34 +56,19 @@ A small value of clock frequency simultaneously means a low performance.That is 
 
 ## Part 2
 
-RESULTS 
+### Question 1 : How can we find AREA,DELAY and ENERGY metrics?
 
 #### AREA
 
-**Core** : total area is: 121.7895454 mm^2
+**Core** : total area is: 121.7895454 mm^2  **L2** : total area is: 16.0033 mm^2
 
-
-**L2** : total area is: 16.0033 mm^2
-
+#### DELAY
 
 #### ENERGY
 
-Energy = (leakage + dynamic)*runtime
+Energy = (leakage + dynamic)*runtime (formula from print_energy.py)
 
 Leakage can be found by "total leakage", dynamic can by found by "Runtime Dynamic" and runtime by statistics.
-
-dynamic = runtime dynamic
-
-runtime = taken from StatsFile
-
-
-
-
-
-
-
-
-
 
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -97,8 +82,6 @@ To measure the delay (latency), we can use the Runtime Dynamic = Energy/Time ela
 
 
 
-
-
 **TOTAL RUNTIME DYNAMIC**
 
 **Core** : 149.740847 W/s
@@ -109,6 +92,10 @@ Time elapsed = Energy / Runtime Dynamic = 114,6457415 / 149,740847 = 0,765627708
 **L2** : 7.23071 W/s
 
 Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Question 2 : How area and peak power are affected by cache size, associativity and block size? Show the results using diagrams.
 
 wikipedia
 

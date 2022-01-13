@@ -58,10 +58,36 @@ A small value of clock frequency simultaneously means a low performance.That is 
 
 RESULTS 
 
+#### AREA
+
 **Core** : total area is: 121.7895454 mm^2
 
 
 **L2** : total area is: 16.0033 mm^2
+
+
+#### ENERGY
+
+Energy = (leakage + dynamic)*runtime
+
+leakage = total leakage
+
+dynamic = runtime dynamic
+
+runtime = taken from StatsFile
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
 
 Runtime dynamic is equal to the energy consumed divided by the time elapsed.
 the timing model uses
@@ -69,12 +95,20 @@ both resistance and capacitance to compute RC delays
 
 To measure the delay (latency), we can use the Runtime Dynamic = Energy/Time elapsed
 
+
+
+
+
 **TOTAL RUNTIME DYNAMIC**
 
-Core: 149.740847 W/s
+**Core** : 149.740847 W/s
 
-L2: 7.23071 W/s
+Time elapsed = Energy / Runtime Dynamic = 114,6457415 / 149,740847 = 0,765627708 s
 
+
+**L2** : 7.23071 W/s
+
+Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 wikipedia
 

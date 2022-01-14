@@ -105,6 +105,12 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 ![image](https://user-images.githubusercontent.com/94965416/149534755-b07e4d93-899c-4113-8194-38369351cbef.png)
 
+![image](https://user-images.githubusercontent.com/94965416/149541585-57c20065-5969-4901-bc41-413ab06e47a8.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149542544-caecb1f7-a4fe-445a-bdb9-b03a3e3e54da.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149543098-18187301-fc42-46f0-9f9f-eac1947c5de4.png)
+
 
 
 
@@ -116,6 +122,11 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 ![image](https://user-images.githubusercontent.com/94965416/149540495-938e95f0-3c17-439e-a4c3-79fbb0512420.png)
 
+![image](https://user-images.githubusercontent.com/94965416/149544440-33c3888f-482a-447d-8575-885eaebd55e1.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149545371-f2a24b99-86e5-4638-8265-8a24eb858a9a.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149545915-2a88c88d-701b-45c4-aabc-c2831694ee5f.png)
 
 
 

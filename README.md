@@ -107,6 +107,12 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 ![image](https://user-images.githubusercontent.com/94965416/149553711-8644b6f1-fb07-429d-80cc-2abe3d132e67.png)
 
+![image](https://user-images.githubusercontent.com/94965416/149557503-2d13ec4a-dcd1-4516-9e86-d9275707707b.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149558988-b43f8ec3-2def-4a29-9244-cecb9f12ddb0.png)
+
+
+
 
 ![image](https://user-images.githubusercontent.com/94965416/149541585-57c20065-5969-4901-bc41-413ab06e47a8.png)
 
@@ -115,6 +121,10 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 ![image](https://user-images.githubusercontent.com/94965416/149543098-18187301-fc42-46f0-9f9f-eac1947c5de4.png)
 
 ![image](https://user-images.githubusercontent.com/94965416/149552651-1748aac5-470d-452a-8b80-427bb64a62c6.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149556133-02db8972-4d5e-43ec-86e2-c1c11a70b0a1.png)
+
+
 
 
 
@@ -131,12 +141,21 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 ![image](https://user-images.githubusercontent.com/94965416/149554978-9a3486ae-3027-4673-9166-bcdf895f46ef.png)
 
+![image](https://user-images.githubusercontent.com/94965416/149558141-98352a6a-40fd-47e6-a8dd-d9ad0e54369f.png)
+
+
+
 
 ![image](https://user-images.githubusercontent.com/94965416/149544440-33c3888f-482a-447d-8575-885eaebd55e1.png)
 
 ![image](https://user-images.githubusercontent.com/94965416/149545371-f2a24b99-86e5-4638-8265-8a24eb858a9a.png)
 
 ![image](https://user-images.githubusercontent.com/94965416/149545915-2a88c88d-701b-45c4-aabc-c2831694ee5f.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149556585-97a2f149-5e0e-4eb2-9cf2-42f76db3f01a.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149559516-fb462ccd-ca4b-43fb-80ba-fd0e70757d3b.png)
+
 
 
 

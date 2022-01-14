@@ -97,6 +97,19 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 ### Question 2 : How area and peak power are affected by cache size, associativity and block size? Show the results using diagrams.
 
+#### CORE
+
+![image](https://user-images.githubusercontent.com/94965416/149531931-ec92fd73-42ad-4c4f-80b0-3c6a56512a76.png)
+
+![image](https://user-images.githubusercontent.com/94965416/149532680-bf8bdb50-331a-459b-a954-7dade4def70e.png)
+
+
+
+
+#### L2
+
+![image](https://user-images.githubusercontent.com/94965416/149530461-4863e442-eedb-4d74-bc53-541fadd90b02.png)
+
 wikipedia
 
 https://www.ijert.org/research/energy-efficiency-in-processors-a-survey-IJERTCONV3IS21013.pdf

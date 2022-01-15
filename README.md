@@ -3,7 +3,55 @@
 
 
 ## Part 1 
-### Question 2 : What do dynamic,static, short-circuit power και leakage mean? If we run different programs which one will be affected and how? Does it matter how long the program is?
+
+## Question 1
+
+# Validation of McPAT : 
+
+The main focus of McPAT is to provide an accurate power and area model, with timing giving as a design constraint. There are two kinds of accuracy, especially important for the power modeling: *absolute* and *relative*.
+- Absolute accuracy: it shows that the power of individual components of a cpu McPAT model design , computed within the thermal design power (TDP) limits and perhaps focused on saving power for the cpu or the whole system , is evaluated correctly and is near the results of the real cpu design.
+
+- Relative accuracy: the changes in the McPAT model are relative to the changes of the in the real design, so the power weights of the cpu elements are estimated correctly, compared to the real cpu design.
+
+For this reason, the McPAT model needs to be validated , with its output compared to the published results of real processors.
+The processors that were used are:
+1) 90 nm Niagara , 1.2 GHz, 1.2 V power supply
+2) 65 nm Niagara2 , 1.4 GHz, 1.1 V 
+3) 65 nm Xeon, 3.4 GHz, 1.25 V 
+4) 180 nm Alpha 21364 , 1.2 GHz, 1.5 V
+
+The validation is detailed, checking the McPat results from modeling in and out - of - order , single threaded , or multithreaded processors and is based on parameters, such as clock rate, working temperature and architectural parameters of real processors. Especially the clock rate is the upper bound for the timing design.
+
+# Niagara :
+
+Published power and area:  63 W / 378 nm2
+McPAT result: 56.17 W / 295 nm2
+Error: 10.84%
+
+# Niagara2 :
+
+Published power and area:  84 W / 342 nm2
+McPAT result: 69.7 W / 248 nm2
+Error: 17.02%
+
+# Xeon :
+
+Published power and area:  150 W / 435 nm2
+McPAT result: 116.08 W / 362 nm2
+Error: 22.61%
+
+# Alpha :
+
+Published power and area:  125 W / 396 nm2
+McPAT result: 97.9 W / 324 nm2
+Error: 21.68%
+
+![Στιγμιότυπο οθόνης 2022-01-15 113810](https://user-images.githubusercontent.com/94965416/149617229-b6fb1e63-e2cd-42d6-8f15-98609f859798.png)
+
+
+
+## Question 2
+
 
 **Dynamic power:** CPU 's logic gates are responsible for dynamic power consumption due to their activation.As the logic gates are toogling, energy flows while the capacitors inside them charge and discharge.Dynamic power is equal to: 
 
@@ -21,7 +69,7 @@ C is the switched load capacitance, f is frequency, V is voltage
 
 
 
-**Short-circuit power:** Short circuit power refers to the theoritical current that will run in the event of a short circuit without protection.It can be found by the following formula:
+**Short-circuit power:** Short circuit power refers to the theoritical current that will run in the event of a short circuit through the pull up and pull down devices of the transistor without protection. It can be found by the following formula:
 
 ![image](https://user-images.githubusercontent.com/94965416/148650172-8d4c1f73-1507-4ec4-818b-a5da88fe416f.png)
 
@@ -41,13 +89,39 @@ C is the switched load capacitance, f is frequency, V is voltage
 
 ![image](https://user-images.githubusercontent.com/94965416/148652805-28d6ef3f-8435-4e00-8e09-f2e61d67bc27.png)
 
-If we observe this diagram, we can realise that in a specific CPU the dynamic power changes if we run a different program.As we reduce the area, we understand that the difference in energy between them becomes bigger.
 
-### Question 4 : Why Xeon can't be more energy efficient than ARM A9 although it performs better?
+![Στιγμιότυπο οθόνης 2022-01-15 120230](https://user-images.githubusercontent.com/94965416/149617989-833f1fbb-fc8b-44a9-9811-ef8648ff49e0.png)
+
+
+
+If we observe these diagrams, we can realise that in a specific CPU the dynamic ( memory dynamic in the second diagram ), static ( memory standby of the second diagram ), leakage and system power change if we run a different program.As we reduce the area,we see that in each program , power,EDP, EDAP change and we understand that the difference in energy between the programs becomes bigger.
+The IPC and the power are analog, so the running time of a program affects the power.
+
+
+
+## Question 3:
+
+If we use the 35 W processor, the battery life may be longer, if it is more energy( or power ) efficient than the 25 W , or it uses techniques for reducing power.
+
+Energy efficient means that it uses the least possible energy for a program. 
+
+When the power is constant, less energy for a task means less running time for this task, so we can reduce running time and save the energy of the battery , or we can run more programs and tasks until the battery energy finishes, so we gain to the effectiveness.
+
+Using tecniques for reducing power dynamically, such as dynamic voltage or frequency scaling, low power state for dram , we can adjust the power to the activation state of the program, which means that we can reduce power when it is not needed.
+
+
+////////// McPAT ------------ the results
+
+
+
+
+
+
+## Question 4 : Why Xeon can't be more energy efficient than ARM A9 although it performs better?
 
 After taking into consideration that Xeon performs 40 times faster than ARM A9 we can understand that this fact might affect its energy efficiency level.Energy efficiency means using as lower energy as possible.Data shows that Dynamic power can be decreased by
 1. Decrease in the total gate number
-2. Decrease of clock frequency
+2. Decrease of clock frequency 
 
 ![Screenshot from 2022-01-11 16-53-42](https://user-images.githubusercontent.com/94965416/148965858-ed5e4459-ad73-4daf-ab85-924a04778231.png)
 
@@ -93,15 +167,13 @@ Time elapsed = Energy / Runtime Dynamic = 114,6457415 / 149,740847 = 0,765627708
 
 Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
+
+/////////// EDAP
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Question 2 : How area and peak power are affected by cache size, associativity and block size? Show the results using diagrams.
 
---------------------------------------------------------------------------------------------------------------------------------------
-
 #### CORE
-
----------------------------------------------------------------------------------------------------------------------------------------
 
 ![image](https://user-images.githubusercontent.com/94965416/149531931-ec92fd73-42ad-4c4f-80b0-3c6a56512a76.png)
 
@@ -124,16 +196,18 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 ![image](https://user-images.githubusercontent.com/94965416/149543098-18187301-fc42-46f0-9f9f-eac1947c5de4.png)
 
+![image](https://user-images.githubusercontent.com/94965416/149552651-1748aac5-470d-452a-8b80-427bb64a62c6.png)
+
 ![image](https://user-images.githubusercontent.com/94965416/149556133-02db8972-4d5e-43ec-86e2-c1c11a70b0a1.png)
 
 
 
 
-----------------------------------------------------------------------------------------------------------------
+
+
+
 
 #### L2
-
------------------------------------------------------------------------------------------------------------------
 
 ![image](https://user-images.githubusercontent.com/94965416/149537560-3639010d-5518-4335-9734-ee494f9117b0.png)
 

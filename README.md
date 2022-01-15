@@ -207,7 +207,6 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 ![image](https://user-images.githubusercontent.com/94965416/149621777-3b539669-1b1a-44d4-815b-7919c0571168.png)
 
 
-![image](https://user-images.githubusercontent.com/94965416/149556133-02db8972-4d5e-43ec-86e2-c1c11a70b0a1.png)
 
 
 

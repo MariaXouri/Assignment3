@@ -25,25 +25,33 @@ The validation is detailed, checking the McPat results from modeling in and out 
 # Niagara :
 
 Published power and area:  63 W / 378 nm2
+
 McPAT result: 56.17 W / 295 nm2
+
 Error: 10.84%
 
 # Niagara2 :
 
 Published power and area:  84 W / 342 nm2
+
 McPAT result: 69.7 W / 248 nm2
+
 Error: 17.02%
 
 # Xeon :
 
 Published power and area:  150 W / 435 nm2
+
 McPAT result: 116.08 W / 362 nm2
+
 Error: 22.61%
 
 # Alpha :
 
 Published power and area:  125 W / 396 nm2
+
 McPAT result: 97.9 W / 324 nm2
+
 Error: 21.68%
 
 ![Στιγμιότυπο οθόνης 2022-01-15 113810](https://user-images.githubusercontent.com/94965416/149617229-b6fb1e63-e2cd-42d6-8f15-98609f859798.png)

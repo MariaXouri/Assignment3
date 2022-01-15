@@ -105,6 +105,9 @@ C is the switched load capacitance, f is frequency, V is voltage
 If we observe these diagrams, we can realise that in a specific CPU the dynamic ( memory dynamic in the second diagram ), static ( memory standby of the second diagram ), leakage and system power change if we run a different program.As we reduce the area,we see that in each program , power,EDP, EDAP change and we understand that the difference in energy between the programs becomes bigger.
 The IPC and the power are analog, so the running time of a program affects the power.
 
+![image](https://user-images.githubusercontent.com/94965416/149622165-b6435507-b085-4099-9478-97efcfca3448.png)
+
+
 
 
 ## Question 3:

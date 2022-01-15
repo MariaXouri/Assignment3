@@ -8,7 +8,7 @@
 
 # Validation of McPAT : 
 
-The main focus of McPAT is to provide an accurate power and area model, with timing giving as a design constraint. There are two kinds of accuracy, especially important for the power modeling: *absolute* and *relative*.
+The main focus of McPAT is to provide an accurate power and area model, with timing given as a design constraint. There are two kinds of accuracy, especially important for the power modeling: *absolute* and *relative*.
 - Absolute accuracy: it shows that the power of individual components of a cpu McPAT model design , computed within the thermal design power (TDP) limits and perhaps focused on saving power for the cpu or the whole system , is evaluated correctly and is near the results of the real cpu design.
 
 - Relative accuracy: the changes in the McPAT model are relative to the changes of the in the real design, so the power weights of the cpu elements are estimated correctly, compared to the real cpu design.

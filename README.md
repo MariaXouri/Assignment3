@@ -3,7 +3,7 @@
 
 
 ## Part 1 
-### Question 2
+### Question 2 : What do dynamic,static, short-circuit power και leakage mean? If we run different programs which one will be affected and how? Does it matter how long the program is?
 
 **Dynamic power:** CPU 's logic gates are responsible for dynamic power consumption due to their activation.As the logic gates are toogling, energy flows while the capacitors inside them charge and discharge.Dynamic power is equal to: 
 

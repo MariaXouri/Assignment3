@@ -107,6 +107,14 @@ The IPC and the power are analog, so the running time of a program affects the p
 
 ![image](https://user-images.githubusercontent.com/94965416/149622165-b6435507-b085-4099-9478-97efcfca3448.png)
 
+We tried two different benchmarks in the same CPU,SPECLIBM and SPECHMMER.Let's take Core for example.
+
+
+
+
+
+
+
 
 
 

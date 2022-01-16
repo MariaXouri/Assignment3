@@ -107,6 +107,20 @@ The IPC and the power are analog, so the running time of a program affects the p
 
 ![image](https://user-images.githubusercontent.com/94965416/149622165-b6435507-b085-4099-9478-97efcfca3448.png)
 
+For instance, we tried two different benchmarks: SPECHMMER and SPECBZIP
+
+**SPECHMMER**
+
+
+![Screenshot from 2022-01-16 20-24-25](https://user-images.githubusercontent.com/94965416/149682007-6925f5b9-02a3-4363-8a42-20d12576bf0b.png)
+
+
+**SPECBZIP**
+
+![Screenshot from 2022-01-17 01-07-52](https://user-images.githubusercontent.com/94965416/149682016-4f88705a-bd23-4ae1-8b21-1ea1905ccabb.png)
+
+
+
 
 
 

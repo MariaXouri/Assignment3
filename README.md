@@ -120,6 +120,8 @@ For instance, we tried two different benchmarks: SPECHMMER and SPECBZIP
 ![Screenshot from 2022-01-17 01-07-52](https://user-images.githubusercontent.com/94965416/149682016-4f88705a-bd23-4ae1-8b21-1ea1905ccabb.png)
 
 
+All the reuslts are different, which means that all powers are being affected by the program change.
+
 
 
 

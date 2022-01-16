@@ -107,14 +107,6 @@ The IPC and the power are analog, so the running time of a program affects the p
 
 ![image](https://user-images.githubusercontent.com/94965416/149622165-b6435507-b085-4099-9478-97efcfca3448.png)
 
-We tried two different benchmarks in the same CPU,SPECLIBM and SPECHMMER.Let's take Core for example.
-
-
-
-
-
-
-
 
 
 
@@ -253,6 +245,223 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 
 ## Question 3:
+
+We will try to notice how the area and the peak dynamic power are affected by the changes in the parameters l1 d , l1 i , l2 cache size, associativity, cacheline size. 
+
+For the types, we will use ar for area and b = log(y / ymin) - 1 , where y is the value of the parameter ( l1d, l1i, l2, a, cl ) and ymin is the minimum value of this parameter.
+l1d min=64 KB 
+l1i min=64 KB
+l2 min=512 KB 
+a min=1,1,2
+cl min=64 KB
+
+We suppose that y>ymin.
+
+bl1d=log(l1d / 64) -1
+bl1i=log(l1i/64) -1
+bl2=log(l2/512) -1
+ba=log(a/1) -1
+bcl=log(cl/64) -1
+
+
+## Core:
+
+
+* ## Area:
+ 
+ * l1 i cache: ar = 9.61665 * 1.25 * 0.8936 ^ bl1i
+ 
+ * l1 d cache: ar = 7.22483 * 0.6837 * 0.58 ^ bl1d
+  
+ * l2 cache:   ar is not affected .  ar = 7.22483
+ 
+ * associativity :  ar = 7.15183 * 1.0102 * 0.9834 ^ ba
+
+ * cacheline size : ar = 7.22483 * 1.528 * 1.59 ^ bcl
+
+
+* ## Peak dynamic power:
+
+ * l1 i cache: ar = 2.54945 * 1.1 * 0.966 ^ bl1i
+ 
+ * l1 d cache: ar = 1.95501 * 1.108 * 0.96 ^ bl1d
+  
+ * l2 cache:   ar is not affected .  ar = 1.95501
+ 
+ * associativity :  ar = 1.92264 * 1.017 * 1.15 ^ ba
+
+ * cacheline size : ar = 1.95501 * 2.743 * 1.1857 ^ bcl
+
+
+## L2:
+
+
+* ## Area:
+
+ * l1 i cache: ar is not affected . ar = 7.0038
+ 
+ * l1 d cache: ar = 1.72115 * 4.069 * 0.245 ^ bl1d
+  
+ * l2 cache:   ar = 1.57638 * 6.056 * 0.314 ^ bl2 
+ 
+ * associativity :  ar = 7.69091 * 1 * 0.91 ^ ba
+
+ * cacheline size : ar = 7.038 * 5.4607* 0.3 ^ bcl
+
+
+* ## Peak dynamic power:
+
+ * l1 i cache: ar is not affected . ar = 0.539842
+ 
+ * l1 d cache: ar = 0.539842 ^ ( - |bl1d | ) (absolute value)
+  
+ * l2 cache:   ar = 0.33841 * 1.5952 * 0.766 ^ bl2
+ 
+ * associativity :  ar = 0.5397 * 1 * 1 ^ ba
+
+ * cacheline size : ar = 0.539842 * 3.7 * 0.95 ^ bcl
+
+
+
+We can observe that with some values of different parameters, the same area or peak dynamic power is achieved . This is the same as the area or peak dynamic power that is achieved when we change the parameters that can not affect them ( l2 cache for the core and l1 d cache for the l2 ).
+
+## Core:
+
+* ## area:
+ 
+ * l1 d cache = 64 KB
+ 
+ * l2 cache = 512 KB , 2 MB , 4 MB 
+ 
+ * associativity = 1 , 1 , 2
+ 
+ * cacheline size = 64 KB                            /////////// Area = 7.22483
+
+
+
+
+* ## peak dynamic power:
+ 
+ * l1 d cache = 64 KB
+ 
+ * l2 cache = 512 KB , 2 MB , 4 MB 
+ 
+ * associativity = 2 , 2 , 4
+ 
+ * cacheline size = 64 KB                           //////////// peak dynamic power = 1.95501
+
+
+
+## L2:
+
+* ## area:
+
+ * l1 i cache = 64 KB , 128 KB , 256 KB
+ 
+ * l1 d cache = 128 KB , 256 KB 
+  
+ * l2 cache = 2 MB 
+ 
+ * associativity = 4 , 4 , 8                        ///////////// Area = 7.0038
+
+
+* ## peak dynamic power:
+
+ * l1 i cache = 64 KB , 128 KB , 256 KB
+ 
+ * l1 d cache = 64 KB , 256 KB 
+  
+ * l2 cache = 2 MB 
+ 
+ * associativity = 4 , 4 , 8                      ////////////// peak dynamic power = 0.539842
+                   
+                   
+
+
+When we set these values to the parameters, the area or the peak dynamic power are the best for the EDAP to be best optimized.
+* For the core :
+
+  EDAP = power * delay ^ 2 * area = 7.22483 * 1.95501 * delay ^ 2 = 14.1246 * delay ^ 2
+
+* For the L2 :
+
+  EDAP = power * delay ^ 2 * area = 7.0038 * 0.539842 * delay ^ 2 = 3.78 * delay ^ 2
+   
+
+
+
+The cost is analog to the area .
+
+
+The cost function that we estimated in part 2 is:
+
+## Cost = 5x + 5y + 5z + 3w + 1q 
+
+
+
+The performance function is:
+
+## Performance = 5x + 3y + 1.5z +1w + 1q 
+
+In part 3 , it seems that the parameters that affect the area and the cost are :   associativity > cacheline > l1 i > l1 d > l2
+The new function can be :
+
+
+## Cost 
+
+
+In part 3 , it seems that the parameters that affect the power and the performance are :  associativity > cacheline > l1 i > l1 d > l2
+The new function can be :
+
+## Performance 
+
+
+
+
+
+
+The effectiveness , according to part 2 , is :
+
+![image](https://user-images.githubusercontent.com/94965416/149675640-b2ae2d72-c402-45aa-947f-ed0691f08a79.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
 
 
 

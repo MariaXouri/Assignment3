@@ -496,3 +496,5 @@ https://www.edaboard.com
 https://www.slideshare.net/sdpable/power-consumption
 
 https://www.iue.tuwien.ac.at/phd/stockinger/node17.html
+
+https://hcis-journal.springeropen.com/articles/10.1186/s13673-015-0046-x

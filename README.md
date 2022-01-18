@@ -188,6 +188,80 @@ Energy = (leakage + dynamic)*runtime (formula from print_energy.py)
 Leakage can be found by "total leakage", dynamic can by found by "Runtime Dynamic" and runtime by statistics.
 
 
+*WHICH EDAP IS BETTER?**
+
+EDAP=ENERGY X DELAY X AREA product.
+
+### LOW VALUES
+
+**L1i:** 64kB
+
+**L1d:** 64kB
+
+**L2:** 512 kB
+
+**associativity:** 1,1,2
+
+**cacheline size:** 64kB
+
+
+#### EDAP= 
+
+
+
+### MEDIUM VALUES
+
+**L1i:** 128kB
+
+**L1d:** 128kB
+
+**L2:** 2MB
+
+**associativity:** 2,2,4
+
+**cacheline size:** 126kB
+
+
+
+#### EDAP=
+
+
+### HIGH VALUES
+
+**L1i:** 256kB
+
+**L1d:** 256kB
+
+**L2:** 4MB
+
+**associativity:** 4,4,8
+
+**cacheline size:** 256B
+
+
+#### EDAP=
+
+
+
+
+### MIXED VALUES
+
+**L1i:** 64kB
+
+**L1d:** 256kB
+
+**L2:** 2MB
+
+**associativity:** 1,1,2
+
+**cacheline size:** 64kB
+
+#### EDAP=
+
+
+
+
+
 --------------------------------------------------------------------------------------------------------------------------
 
 

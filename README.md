@@ -179,7 +179,7 @@ To reduce power consumption we can:
 
 #### DELAY
 
-The CPU time = CPU cycles / Clock rate can be found in the xml files. For example, <stat name="total_cycles" value="118294773" /> describes the total CPU cycles.The clock rate can be found by <param name="clock_rate" value="2000"
+The CPU time = CPU cycles / Clock rate can be found in the xml files. For example, stat name="total_cycles" value="118294773"  describes the total CPU cycles.The clock rate can be found by param name="clock_rate" value="2000"
 
 #### ENERGY
 

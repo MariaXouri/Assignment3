@@ -165,6 +165,13 @@ A small value of clock frequency simultaneously means a low performance.That is 
 
 #### DELAY
 
+Runtime dynamic is equal to the energy consumed divided by the time elapsed.
+the timing model uses
+both resistance and capacitance to compute RC delays
+
+To measure the delay (latency), we can use the Runtime Dynamic = Energy/Time elapsed
+
+
 #### ENERGY
 
 Energy = (leakage + dynamic)*runtime (formula from print_energy.py)
@@ -175,11 +182,6 @@ Leakage can be found by "total leakage", dynamic can by found by "Runtime Dynami
 --------------------------------------------------------------------------------------------------------------------------
 
 
-Runtime dynamic is equal to the energy consumed divided by the time elapsed.
-the timing model uses
-both resistance and capacitance to compute RC delays
-
-To measure the delay (latency), we can use the Runtime Dynamic = Energy/Time elapsed
 
 
 

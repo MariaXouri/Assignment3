@@ -146,13 +146,27 @@ Using tecniques for reducing power dynamically, such as dynamic voltage or frequ
 
 ## Question 4 : Why Xeon can't be more energy efficient than ARM A9 although it performs better?
 
-After taking into consideration that Xeon performs 40 times faster than ARM A9 we can understand that this fact might affect its energy efficiency level.Energy efficiency means using as lower energy as possible.Data shows that Dynamic power can be decreased by
+
+Xeon runs 40 times faster: Meaning that it has a better performance level.
+
+Energy efficiency means as low energy consumption as possible.It is described by the following equation:
+![image](https://user-images.githubusercontent.com/94965416/149975111-e7829102-631a-4027-8aec-8cc941a0cf2f.png)
+
+
+ The easiest way to minimize energy consumption is to scale the supply voltage Vcc. However, in CMOS circuits scaling Vcc can lead Vth (threshold voltage) to operate below threshold level which can delay τSwitching which in turn causes leakage energy component to become the dominant contributor to ETotal.This fact shows that low energy consumption doesn't affect performance in a good way.
+ 
+ Reverse Body Biasing (RBB) technique increases the threshold voltage and thus brings an exponential reduction in leakage power. However, the increase in threshold voltage reduces gate overdrive (VDD − Vt), reducing circuit's performance (VDD is voltage of the power supply and Vt threshold voltage). Either scaling VDD or increasing Vt slows down switching. Considering dynamic or leakage power independently, the performance can be traded for power by scaling either VDD or Vt. As in both cases, performance degradation is linear to the scaling of the VDD or Vt, whereas power savings are either quadratic or exponential, the resulting improvement in EDP is substantial.
+
+
+**POWER CONSUMPTION**
+To reduce power consumption we can:
+
 1. Decrease in the total gate number
 2. Decrease of clock frequency 
 
 ![Screenshot from 2022-01-11 16-53-42](https://user-images.githubusercontent.com/94965416/148965858-ed5e4459-ad73-4daf-ab85-924a04778231.png)
 
-A small value of clock frequency simultaneously means a low performance.That is the reason why Xeon can't be as energy efficient as wanted.
+
 
 
 ## Part 2

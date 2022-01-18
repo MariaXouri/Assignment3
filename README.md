@@ -179,12 +179,7 @@ To reduce power consumption we can:
 
 #### DELAY
 
-Runtime dynamic is equal to the energy consumed divided by the time elapsed.
-the timing model uses
-both resistance and capacitance to compute RC delays
-
-To measure the delay (latency), we can use the Runtime Dynamic = Energy/Time elapsed
-
+The CPU time = CPU cycles / Clock rate can be found in the xml files. For example, <stat name="total_cycles" value="118294773" /> describes the total CPU cycles.The clock rate can be found by <param name="clock_rate" value="2000"
 
 #### ENERGY
 

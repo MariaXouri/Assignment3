@@ -214,19 +214,20 @@ EDAP=ENERGY X DELAY X AREA product.
 
 ### MEDIUM VALUES
 
-**L1i:** 128kB
+**L1i:** 128kB    CORE: Area = 12.0302 mm^2 , Delay=0,05931s Energy=0.3498J | L2: Area = 7.00381 mm^2 Delay=0,05931s  Energy=0.0327097298J
 
-**L1d:** 128kB
+**L1d:** 128kB   CORE: Area = 9.87973 mm^2 , Delay=0,05923s Energy=0.2981J | L2: Area =7.0038 mm^2 Delay=0,05923s  Energy=0.032581J
 
-**L2:** 2MB
+**L2:** 2MB    CORE: Area =  7.22483 mm^2 , Delay=0,05932s Energy=0.25J | L2: Area =7.0038 mm^2 Delay=0,05932s  Energy=0.032718J
 
-**associativity:** 2,2,4
+**associativity:** 2,2,4   CORE: Area =  7.22483 mm^2 , Delay=0,05932s Energy=0.25J | L2: Area = 7.68591 mm^2 Delay=0,05932s  Energy=0.032677J
 
-**cacheline size:** 126kB
+**cacheline size:** 128kB   CORE: Area = 11.0402 mm^2 , Delay=0,05904s Energy=0.3269J | L2: Area = 38.4333 mm^2 Delay=0,05904s  Energy=0.472J
 
 
 
-#### EDAP=
+
+#### EDAP= CORE : 47.39979 x 0.49622 x 1.4748 = 34.688   |  L2: 67.13062 X 0.49622 X 0.602 = 20.0763
 
 
 ### HIGH VALUES

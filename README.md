@@ -206,8 +206,6 @@ EDAP=ENERGY X DELAY X AREA product.
 
 
 
-
-
 #### EDAP= CORE: 38.4429 x 0,83795 x 1,3583424 = 10.1430 | L2: 30.9658 x 0,83795 x 0,984659 = 25.54972 
 
 
@@ -225,25 +223,32 @@ EDAP=ENERGY X DELAY X AREA product.
 **cacheline size:** 128kB   CORE: Area = 11.0402 mm^2 , Delay=0,05904s Energy=0.3269J | L2: Area = 38.4333 mm^2 Delay=0,05904s  Energy=0.472J
 
 
-
-
 #### EDAP= CORE : 47.39979 x 0.49622 x 1.4748 = 34.688   |  L2: 67.13062 X 0.49622 X 0.602 = 20.0763
 
 
 ### HIGH VALUES
 
-**L1i:** 256kB
-
-**L1d:** 256kB
-
-**L2:** 4MB
-
-**associativity:** 4,4,8
-
-**cacheline size:** 256B
+**L1i:** 256kB     CORE: Area = 13.4412 mm^2 , Delay=0,05931s Energy=0.4055J | L2: Area = 7.0038 mm^2 Delay=0,05931s  Energy=0.0327J
 
 
-#### EDAP=
+
+
+**L1d:** 256kB   CORE: Area = 11.4319 mm^2 , Delay=0,059147s Energy=0.334J | L2: Area = 7.0038 mm^2 Delay=0,059147s  Energy=0.03249J
+
+
+
+**L2:** 4MB   CORE: Area = 7.22483 mm^2 , Delay=0,05932s Energy=0.25J | L2: Area = 13.3224 mm^2 Delay=0,0,05932s  Energy=0.04040J
+
+
+
+**associativity:** 4,4,8  CORE: Area = 6.85161 mm^2 , Delay=0,05929s Energy=0.249J | L2: Area = 7.0038 mm^2 Delay=0,05929s  Energy=0.03269J
+
+
+
+**cacheline size:** 256B  CORE: Area = 92.1132 mm^2 , Delay=0,05908s Energy=3.5342J | L2: Area = 63.5151 mm^2 Delay=0,05908s  Energy=0.4219J
+
+
+#### EDAP = CORE : 131.06274 x 0.296147 x 4.7727 = 185,246  | L2 : 90.8451 x 0,296147 x 0.52748 = 14,191
 
 
 

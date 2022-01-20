@@ -253,19 +253,22 @@ EDAP=ENERGY X DELAY X AREA product.
 
 
 
-### MIXED VALUES
+### OPTIMAL RESULT FROM PREVIOUS TASK " small l1i cache like 32kB or 64kB, small associativities like 2 , mediocre l2 cache like 2MB and big l1d cache "
 
-**L1i:** 64kB
+**L1i:** 64kB  CORE: Area = 9.61665 mm^2 , Delay=0,05931s Energy=0.3269 | L2: Area =7.0038 mm^2 Delay=0,05931s  Energy=0.0327J
 
-**L1d:** 256kB
+**L1d:** 256kB  CORE: Area = 11.4319  mm^2 , Delay=0,05914s Energy=0.33399J | L2: Area =7.0038 mm^2 Delay=0,05914s  Energy=0.03249J
 
-**L2:** 2MB
+**L2:** 2MB  CORE: Area = 7.22483 mm^2 , Delay=0,05932s Energy=0.25J | L2: Area =7.0038 mm^2 Delay=0,05931s  Energy=0.0327J
 
-**associativity:** 1,1,2
+**associativity:** 1,1,2   CORE: Area = 7.15183 mm^2 , Delay=0.0668s Energy=0,2814424J |  L2: Area =  7.69091 mm^2 Delay=0,0668s  Energy=0.03769J
 
-**cacheline size:** 64kB
+**cacheline size:** 64kB CORE: Area = 7.22483 mm^2 , Delay=0.5932s Energy=0,25J | L2: Area =  7.0038 mm^2 Delay=0,5932s  Energy=0.5643J
 
-#### EDAP=
+#### EDAP = CORE : 42.65004 x 1,97285 x 1.4423324 = 121.3609 | L2 : 35,70611 x 1,97285 x 0.69988 = 48.4240
+
+
+**CORE : LOW VALUES' EDAP  , L2 : HIGH VALUES' EDAP 
 
 
 

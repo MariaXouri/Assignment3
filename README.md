@@ -361,7 +361,7 @@ Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 We will try to notice how the area and the peak dynamic power are affected by the changes in the parameters l1 d , l1 i , l2 cache size, associativity, cacheline size. 
 
-For the types, we will use ar for area and b = log(y / ymin) - 1 , where y is the value of the parameter ( l1d, l1i, l2, a, cl ) and ymin is the minimum value of this parameter.
+For the types, we will use "ar" for area , "pd" for peak dynamic power and b = log(y / ymin)  , where y is the value of the parameter ( l1d, l1i, l2, a, cl ) and ymin is the minimum value of this parameter.
 l1d min=64 KB 
 l1i min=64 KB
 l2 min=512 KB 
@@ -370,27 +370,33 @@ cl min=64 KB
 
 We suppose that y>ymin.
 
-bl1d=log(l1d / 64) -1
-bl1i=log(l1i/64) -1
-bl2=log(l2/512) -1
-ba=log(a/1) -1
-bcl=log(cl/64) -1
+bl1d=log(l1d / 64) 
+bl1i=log(l1i/64) 
+bl2=log(l2/512) 
+ba=log(a/1) 
+bcl=log(cl/64) 
 
+
+The type for calculating the area or the peak dynamic power is :
+
+## _ar or pd = (initial value for ar or pd for minimum values of parameters ) * ( second / initial value ) ^ b * a ^ (b - 1 ),_ 
+
+where a = (third / second value ) / (second / initial value )   shows how the coefficient  y / x ((ar or pd) / parameter) changes as the value of parameter becomes bigger.
 
 ## Core:
 
 
 * ## Area:
  
- * l1 i cache: ar = 9.61665 * 1.25 * 0.8936 ^ bl1i
+ * l1 i cache: ar = 9.61665 * (1.25 ^ bl1i) * 0.8936 ^ ( bl1i - 1 )             
  
- * l1 d cache: ar = 7.22483 * 0.6837 * 0.58 ^ bl1d
+ * l1 d cache: ar = 7.22483 * ( 0.6837 ^ bl1d ) * 0.58 ^ ( bl1d - 1 )
   
  * l2 cache:   ar is not affected .  ar = 7.22483
  
- * associativity :  ar = 7.15183 * 1.0102 * 0.9834 ^ ba
-
- * cacheline size : ar = 7.22483 * 1.528 * 1.59 ^ bcl
+ * associativity :  ar = 7.15183 * ( 1.0102 ^ ba ) * 0.9834 ^ ( ba - 1 )
+ 
+ * cacheline size : ar = 7.22483 * ( 1.528 ^ bcl ) * 1.59 ^ bcl
 
 
 * ## Peak dynamic power:

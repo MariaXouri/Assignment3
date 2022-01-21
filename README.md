@@ -491,7 +491,7 @@ We can observe that with some values of different parameters, the same area or p
                    
 
 
-When we set these values to the parameters, the area or the peak dynamic power are the best for the EDAP to be best optimized.
+When we set these values to the parameters
 * For the core :
 
   EDAP = power * delay ^ 2 * area = 7.22483 * 1.95501 * delay ^ 2 = 14.1246 * delay ^ 2

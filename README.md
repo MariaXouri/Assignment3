@@ -547,7 +547,7 @@ The effectiveness , according to part 2 , is :
 
 
 
-
+### Comments: This exercise helped us learn better how energy and power consumption works in CPUs.The only problem was that some questions asked us to find some data and then  use them same in the other questions.If we didn't find the first data correctly, then the other questions will be affected too.(Part B EXERCISE 2)
 
 
 

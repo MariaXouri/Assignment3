@@ -137,7 +137,6 @@ When the power is constant, less energy for a task means less running time for t
 Using tecniques for reducing power dynamically, such as dynamic voltage or frequency scaling, low power state for dram , we can adjust the power to the activation state of the program, which means that we can reduce power when it is not needed.
 
 
-////////// McPAT ------------ the results
 
 
 
@@ -292,7 +291,7 @@ Time elapsed = Energy / Runtime Dynamic = 114,6457415 / 149,740847 = 0,765627708
 Time elapsed = Energy / Runtime Dynamic = 3.16559 / 7.23071 = 0,437797948 s
 
 
-/////////// EDAP
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Question 2 : How area and peak power are affected by cache size, associativity and block size? Show the results using diagrams.
@@ -388,28 +387,28 @@ where a = (third / second value ) / (second / initial value )   shows how the co
 
 * ## Area:
  
- * l1 i cache: ar = 9.61665 * (1.25 ^ bl1i) * 0.8936 ^ ( bl1i - 1 )             
+ * l1 i cache: ar = 9.61665 * (1.25 ^ bl1i) * ( 0.8936 ^ bl1i )        
  
- * l1 d cache: ar = 7.22483 * ( 0.6837 ^ bl1d ) * 0.58 ^ ( bl1d - 1 )
+ * l1 d cache: ar = 7.22483 * ( 0.6837 ^ bl1d ) * ( 0.58 ^ bl1d )
   
  * l2 cache:   ar is not affected .  ar = 7.22483
  
- * associativity :  ar = 7.15183 * ( 1.0102 ^ ba ) * 0.9834 ^ ( ba - 1 )
+ * associativity :  ar = 7.15183 * ( 1.0102 ^ ba ) * ( 0.9834 ^  ba )
  
- * cacheline size : ar = 7.22483 * ( 1.528 ^ bcl ) * 1.59 ^ bcl
+ * cacheline size : ar = 7.22483 * ( 1.528 ^ bcl ) * ( 1.59 ^ bcl )
 
 
 * ## Peak dynamic power:
 
- * l1 i cache: ar = 2.54945 * 1.1 * 0.966 ^ bl1i
+ * l1 i cache: pd = 2.54945 * ( 1.1 ^ bl1i ) * ( 0.966 ^ bl1i )
  
- * l1 d cache: ar = 1.95501 * 1.108 * 0.96 ^ bl1d
+ * l1 d cache: pd = 1.95501 * ( 1.108 ^ bl1d ) * ( 0.96 ^ bl1d )
   
- * l2 cache:   ar is not affected .  ar = 1.95501
+ * l2 cache:   pd is not affected .  pd = 1.95501
  
- * associativity :  ar = 1.92264 * 1.017 * 1.15 ^ ba
+ * associativity :  pd = 1.92264 * ( 1.017 ^ ba ) * ( 1.15 ^ ba )
 
- * cacheline size : ar = 1.95501 * 2.743 * 1.1857 ^ bcl
+ * cacheline size : pd = 1.95501 * ( 2.743 ^ bcl ) * ( 1.1857 ^ bcl )
 
 
 ## L2:
@@ -419,26 +418,26 @@ where a = (third / second value ) / (second / initial value )   shows how the co
 
  * l1 i cache: ar is not affected . ar = 7.0038
  
- * l1 d cache: ar = 1.72115 * 4.069 * 0.245 ^ bl1d
+ * l1 d cache: ar = 1.72115 * ( 4.069 ^ bl1d ) * ( 0.245 ^ bl1d )
   
- * l2 cache:   ar = 1.57638 * 6.056 * 0.314 ^ bl2 
+ * l2 cache:   ar = 1.57638 * ( 6.056 ^ bl2 ) * ( 0.314 ^ bl2 )
  
- * associativity :  ar = 7.69091 * 1 * 0.91 ^ ba
+ * associativity :  ar = 7.69091 * ( 1 ^ ba ) * ( 0.91 ^ ba )
 
- * cacheline size : ar = 7.038 * 5.4607* 0.3 ^ bcl
+ * cacheline size : ar = 7.038 * ( 5.4607 ^ bcl ) * ( 0.3 ^ bcl )
 
 
 * ## Peak dynamic power:
 
- * l1 i cache: ar is not affected . ar = 0.539842
+ * l1 i cache: pd is not affected . pd = 0.539842
  
- * l1 d cache: ar = 0.539842 ^ ( - |bl1d | ) (absolute value)
+ * l1 d cache: pd = 0.539842 ^ ( - |bl1d | ) (absolute value)
   
- * l2 cache:   ar = 0.33841 * 1.5952 * 0.766 ^ bl2
+ * l2 cache:   pd = 0.33841 * ( 1.5952 ^ bl2 )  *  ( 0.766 ^ bl2 )
  
- * associativity :  ar = 0.5397 * 1 * 1 ^ ba
+ * associativity :  pd = 0.5397 * ( 1 ^ ba ) * ( 1 ^ ba )
 
- * cacheline size : ar = 0.539842 * 3.7 * 0.95 ^ bcl
+ * cacheline size : pd = 0.539842 *  ( 3.7 ^ bcl ) * ( 0.95 ^ bcl )
 
 
 
@@ -522,73 +521,39 @@ The performance function is:
 
 ## Performance = 5x + 3y + 1.5z +1w + 1q 
 
-In part 3 , it seems that the parameters that affect the area and the cost are :   associativity > cacheline > l1 i > l1 d > l2
+
+
+
+In part 3 , it seems that the parameters that affect the area and the cost are :  cacheline > associativity > l2 > l1 d > l1 i
+
+
+We can calculate a new simple function for the area using the results from the area functions.
+* l1 d cache  -> 0.6837 * 0.58 + 4.069 * 0.245 =1.393451  ( core and l2 )
+* l1 i cache  -> 1.25 * 0.8936  =1.117
+* l2 cache -> 6.056 * 0.314 =1.9015
+* cacheline -> 1.528 * 1.59 + 5.4607 * 0.3 =4.067
+* associativity -> 1.0102 * 0.9834 + 1 * 0.91 = 1.903
+
+The new function can be : 
+## Cost = a1 * ( 4.067x + 1.117y + 1.393451z + 1.9015w + 1.903q ) , a1 = cost / area
+
+
+
+In part 3 , it seems that the parameters that affect the power and the performance are :  associativity > cacheline > l1 d > l2 > l1 i
+
+We can calculate a new simple function using the results from the peak power functions.
+* l1 d cache -> 1.108 * 0.96 + 0.539842 = 1.6035
+* l1 i cache -> 1.1 * 0.966 = 1.0626
+* l2 cache -> 1.5952 * 0.766 = 1.221
+* cacheline -> 2.743 * 1.1857 + 3.7 * 0.95 =6.76
+* associativity -> 1.017 * 1.15 + 1 * 1 =2.169
+
 The new function can be :
 
-
-## Cost 
-
-
-In part 3 , it seems that the parameters that affect the power and the performance are :  associativity > cacheline > l1 i > l1 d > l2
-The new function can be :
-
-## Performance 
+## Performance = b1 * ( 2.169x + 1.0626y + 1.6035z + 1.221w + 6.76q ), b1 = performance / power
 
 
-
-
-
-
-The effectiveness , according to part 2 , is :
-
-![image](https://user-images.githubusercontent.com/94965416/149675640-b2ae2d72-c402-45aa-947f-ed0691f08a79.png)
-
-
-
-
-
-### Comments: This exercise helped us learn better how energy and power consumption works in CPUs.The only problem was that some questions asked us to find some data and then  use them same in the other questions.If we didn't find the first data correctly, then the other questions will be affected too.(Part B EXERCISE 2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-wikipedia
+wikipedia 
 
 https://www.ijert.org/research/energy-efficiency-in-processors-a-survey-IJERTCONV3IS21013.pdf
 

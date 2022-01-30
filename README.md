@@ -152,14 +152,33 @@ Using tecniques for reducing power dynamically, such as dynamic voltage or frequ
 ## Question 4 : Why Xeon can't be more energy efficient than ARM A9 although it performs better?
 
 
-Xeon runs 40 times faster: Meaning that it has a better performance level.
+
+**XEON RESULTS**
+
+![image](https://user-images.githubusercontent.com/94965416/151696819-6da371cd-a553-496f-9d4e-db3f6a331ef6.png)
+
+*TOTAL POWER*= 396,02751W
+
+**ARM A9 RESULTS**
+
+![image](https://user-images.githubusercontent.com/94965416/151696857-a72cbd4f-bf88-4de1-b0cb-e8754cd47b8d.png)
+
+*TOTAL POWER*= 6,55299W
+
+We can see that overall power consumption is much bigger in Xeon than in ARM. 
+
+![image](https://user-images.githubusercontent.com/94965416/151697324-d993143c-172a-428e-8121-e2c99a5bc02e.png)
+
+The results show that energy consumption is smaller in ARM than in Xeon, which means that ARM is more energy efficient.
+
+
+**GENERAL INFORMATION ABOUT HOW WE CAN REDUCE ENERGY AND POWER CONSUMPTION**
 
 Energy efficiency means as low energy consumption as possible.It is described by the following equation:
 ![image](https://user-images.githubusercontent.com/94965416/149975111-e7829102-631a-4027-8aec-8cc941a0cf2f.png)
 
 
  The easiest way to minimize energy consumption is to scale the supply voltage Vcc. However, in CMOS circuits scaling Vcc can lead Vth (threshold voltage) to operate below threshold level which can delay τSwitching which in turn causes leakage energy component to become the dominant contributor to ETotal.This fact shows that low energy consumption doesn't affect performance in a good way.
- 
  Reverse Body Biasing (RBB) technique increases the threshold voltage and thus brings an exponential reduction in leakage power. However, the increase in threshold voltage reduces gate overdrive (VDD − Vt), reducing circuit's performance (VDD is voltage of the power supply and Vt threshold voltage). Either scaling VDD or increasing Vt slows down switching. Considering dynamic or leakage power independently, the performance can be traded for power by scaling either VDD or Vt. As in both cases, performance degradation is linear to the scaling of the VDD or Vt, whereas power savings are either quadratic or exponential, the resulting improvement in EDP is substantial.
 
 

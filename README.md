@@ -85,7 +85,7 @@ C is the switched load capacitance, f is frequency, V is voltage
 ![image](https://user-images.githubusercontent.com/94965416/148650779-1dd92035-dd02-49d3-9c7b-fdf983751325.png)
 
 
-**Leakage:** leakage is the gradual transfer of electrical energy across a boundary normally viewed as insulating, such as the spontaneous discharge of a charged capacitor, magnetic coupling of a transformer with other components, or flow of current across a transistor in the "off" state or a reverse-polarized diode.It can also mean an unwanted transfer of energy from one circuit to another.**GATE LEAKAGE**:As the continuous down-scaling of the device size has lead to very thin gate oxides, the leakage current that can flow from the channel to the gate comes into the order of the subthreshold leakage current and the gate cannot be considered as an ideally insulated electrode anymore. This affects the circuit functionality and increases the standby power consumption due to the static gate current. It consists of subthreshold and gate leakage.Two tunneling mechanisms are responsible for the gate leakage.The gate leakage drastically reduces the maximum clock cycle time. **SUBTHRESHOLD LEAKAGE**: It is a leakge that is inadequate to produce a response subthreshold dosage a subthreshold stimulus.It is mainly due to drain-induced barrier lowering or DIBL.The source is then able to inject charge carriers into the surface of the channel resulting in subthreshold leakage current. DIBL is pronounced in high drain voltages and short channel devices.
+**Leakage:** leakage is the gradual transfer of electrical energy on a boundary normally viewed as insulating, such as the  discharge of a charged capacitor, magnetic coupling of a transformer with other components, or flow of current across a transistor in the "off" state or a reverse-polarized diode.It can also mean an unwanted transfer of energy from one circuit to another.**GATE LEAKAGE**:Two tunneling mechanisms are responsible for the gate leakage.As the continuous down-scaling of the device size has lead to very thin gate oxides, the leakage current that can flow from the channel to the gate comes into the order of the subthreshold leakage current and the gate cannot be considered as an ideally insulated electrode anymore. This affects the circuit functionality and increases the standby power consumption due to the static gate current. It consists of subthreshold and gate leakage.The gate leakage drastically reduces the maximum clock cycle time. **SUBTHRESHOLD LEAKAGE**: It is a leakge that is inadequate to produce a response subthreshold dosage a subthreshold stimulus.It is mainly due to drain-induced barrier lowering or DIBL.The source is then able to inject charge carriers into the surface of the channel resulting in subthreshold leakage current. DIBL is pronounced in high drain voltages and short channel devices.
 
 
 
@@ -204,6 +204,8 @@ To reduce power consumption we can:
 #### DELAY
 
 The CPU time = CPU cycles / Clock rate can be found in the xml files. For example, stat name="total_cycles" value="118294773"  describes the total CPU cycles.The clock rate can be found by param name="clock_rate" value="2000"
+
+*the delay is referred to the total latency between  the time that we gave mcPat the instruction , until the time it is being executed
 
 #### ENERGY
 
@@ -596,7 +598,9 @@ The new function can be :
 
 
 
+**COMMENTS**:The exercise mainly focused on understanding how important energy consumption is, in the CPU spectrum. An observation is that we didn't understand if we answered sufficiently in some theoritical tasks (We couldn't measure if you wanted more or less information) .  
 
+SOURCES:
 
 wikipedia 
 
@@ -609,3 +613,6 @@ https://www.slideshare.net/sdpable/power-consumption
 https://www.iue.tuwien.ac.at/phd/stockinger/node17.html
 
 https://hcis-journal.springeropen.com/articles/10.1186/s13673-015-0046-x
+
+McPAT: An Integrated Power, Area, and Timing Modeling
+Framework for Multicore and Manycore Architectures

@@ -134,6 +134,13 @@ Energy efficient means that it uses the least possible energy for a program.
 
 When the power is constant, less energy for a task means less running time for this task, so we can reduce running time and save the energy of the battery , or we can run more programs and tasks until the battery energy finishes, so we gain to the effectiveness.
 
+ energy (25 W ) = 25 * ( running time 1 )
+ energy (35 W ) = 35 * (running time 2 )
+ 
+ The 35 W processor is more efficient than the 25 W if 35 * ( running time 2 ) < 25 * ( running time 1 ) => running time 2 < ( 25 / 35 ) * ( running time 1 ) 
+ 
+ 
+
 Using tecniques for reducing power dynamically, such as dynamic voltage or frequency scaling, low power state for dram , we can adjust the power to the activation state of the program, which means that we can reduce power when it is not needed.
 
 
@@ -380,7 +387,7 @@ The type for calculating the area or the peak dynamic power is :
 
 ## _ar or pd = (initial value for ar or pd for minimum values of parameters ) * ( second / initial value ) ^ b * a ^ (b - 1 ),_ 
 
-where a = (third / second value ) / (second / initial value )   shows how the coefficient  y / x ((ar or pd) / parameter) changes as the value of parameter becomes bigger.
+where a = (third / second value ) / (second / initial value )   shows how the coefficient  y / x ((ar or pd) / parameter) changes as the value of parameter becomes bigger ( the function is not linear ) .
 
 ## Core:
 
@@ -513,7 +520,20 @@ The cost is analog to the area .
 
 The cost function that we estimated in part 2 is:
 
-## Cost = 5x + 5y + 5z + 3w + 1q 
+
+x: cacheline size/ maximum cacheline size
+
+y: l1 dcache size/maximum l1 dcache size
+
+z: l1 icache size/maximum l1 icache size
+
+w: l2 cache size/maximum l2 cache size
+
+q: associativity/maximum associativity
+
+
+## Cost = 5x + 5y + 5z + 3w + 1q  
+
 
 
 
@@ -534,12 +554,16 @@ We can calculate a new simple function for the area using the results from the a
 * cacheline -> 1.528 * 1.59 + 5.4607 * 0.3 =4.067
 * associativity -> 1.0102 * 0.9834 + 1 * 0.91 = 1.903
 
+
+
+
 The new function can be : 
-## Cost = a1 * ( 4.067x + 1.117y + 1.393451z + 1.9015w + 1.903q ) , a1 = cost / area
+## Cost = cl * 4.067x + ld * 1.393451y + li * 1.117z + l2 * 1.9015w + a * 1.903q  , cl = cost of cacheline / area , ld =  cost of l1 d / area ,  li = cost of l1 i / area , 
+## l2 =  cost of l2 / area, a =  cost of associativity / area
 
 
 
-In part 3 , it seems that the parameters that affect the power and the performance are :  associativity > cacheline > l1 d > l2 > l1 i
+In part 3 , it seems that the parameters that affect the power and the performance are :  cacheline >  associativity > l1 d > l2 > l1 i
 
 We can calculate a new simple function using the results from the peak power functions.
 * l1 d cache -> 1.108 * 0.96 + 0.539842 = 1.6035
@@ -550,7 +574,10 @@ We can calculate a new simple function using the results from the peak power fun
 
 The new function can be :
 
-## Performance = b1 * ( 2.169x + 1.0626y + 1.6035z + 1.221w + 6.76q ), b1 = performance / power
+## Performance = b1 * ( 6.76x + 1.6035y + 1.0626z + 1.221w + 2.169q ) , b1 = performance / power
+
+
+
 
 
 wikipedia 

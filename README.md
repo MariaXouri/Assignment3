@@ -6,6 +6,7 @@
 
 ## Question 1
 
+
 # Validation of McPAT : 
 
 The main focus of McPAT is to provide an accurate power and area model, with timing given as a design constraint. There are two kinds of accuracy, especially important for the power modeling: *absolute* and *relative*.

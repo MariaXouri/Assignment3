@@ -1,6 +1,5 @@
 # Assignment3
 
-
 ## Part 1 
 
 ## Question 1
